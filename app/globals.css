@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 0 0% 10%; /* Much darker text color for better contrast */
+
+    --card: 40 33% 98%;
+    --card-foreground: 0 0% 10%; /* Much darker text color for better contrast */
+
+    --popover: 40 33% 98%;
+    --popover-foreground: 0 0% 10%; /* Much darker text color for better contrast */
+
+    --primary-foreground: 0 0% 100%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 33% 96%;
+    --muted-foreground: 0 0% 25%; /* Darker muted text for better contrast */
+
+    --accent: 30 33% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 25 25% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 5% 90%;
+    --input: 20 5% 90%;
+    --ring: 0 0% 10%; /* Darker ring color */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 14% 22%;
+    --foreground: 40 33% 98%;
+
+    --card: 20 14% 22%;
+    --card-foreground: 40 33% 98%;
+
+    --popover: 20 14% 22%;
+    --popover-foreground: 40 33% 98%;
+
+    --primary: 95 10% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 95 5% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 20 14% 30%;
+    --muted-foreground: 40 33% 90%;
+
+    --accent: 30 33% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 25 25% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 14% 30%;
+    --input: 20 14% 30%;
+    --ring: 40 33% 90%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Design-focused custom styles */
+.design-border {
+  @apply border-2 border-primary/20 hover:border-primary/40 transition-colors duration-300;
+}
+
+.design-card {
+  @apply bg-design-cream shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+.design-heading {
+  @apply text-design-charcoal font-light tracking-wide;
+}
+
+.design-accent {
+  @apply text-accent font-medium;
+}
+
+.design-button {
+  @apply bg-primary hover:bg-primary-600 text-white rounded-md px-4 py-2 transition-colors duration-300;
+}
+
+.design-button-outline {
+  @apply border-2 border-primary text-primary hover:bg-primary/10 rounded-md px-4 py-2 transition-colors duration-300;
+}
+
+.design-input {
+  @apply border-b-2 border-primary/30 focus:border-primary bg-transparent px-2 py-1 focus:outline-none transition-colors duration-300;
+}
+
+.design-separator {
+  @apply h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent my-4;
+}
+
+.design-tag {
+  @apply bg-muted text-primary text-xs px-2 py-1 rounded-full;
+}
+
+.design-gold-accent {
+  @apply text-design-gold font-medium;
+}
+
+.text-high-contrast {
+  @apply text-black font-medium;
+}
+
+.card-elegant {
+  @apply bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+.preview-container {
+  @apply bg-white border border-gray-100 shadow-sm rounded-lg overflow-hidden;
+}
+
+.cart-item-refined {
+  @apply bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-200;
+}
+
+/* Add these styles at the end of the file for the modal and backdrop blur effects */
+
+/* Modal and overlay styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  height: 90%;
+  max-width: 1800px;
+  max-height: 90vh;
+  overflow: auto;
+  position: relative;
+}
+
+.design-mode-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.design-mode-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.design-mode-container {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: auto;
+}
+
+.design-mode-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+}

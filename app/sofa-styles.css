@@ -1,0 +1,7 @@
+/* Add CSS to ensure sofa images display with white backgrounds */
+.sofa-image {
+  background-color: white;
+  border-radius: 4px;
+  object-fit: contain;
+  padding: 4px;
+}
