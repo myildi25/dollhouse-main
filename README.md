@@ -89,7 +89,9 @@ This 3D editor functionality should replace or enhance the existing 3D canvas cu
 5.  **Multi-Room System:**
     *   Add a UI button (e.g., a '+' icon) accessible in both the "Room Preview" and "Design Mode" views.
     *   Clicking this button should add a new, empty room adjacent to the currently viewed room.
-    *   The system needs to manage multiple rooms and their contents.
+    *   Provide a UI element (e.g., a dropdown menu, tabs) allowing the user to select the 'active' or 'target' room from the available rooms.
+    *   Furniture added from the selection lists (Recommendations, Buy Mode) should always spawn within this currently selected target room.
+    *   The system needs to manage the state (furniture items, positions, rotations) for multiple rooms independently.
 6.  **2D Floor Plan Mode:**
     *   Implement a toggle or separate view for a 2D top-down floor plan editor.
     *   Allow users to drag the corners/vertices of the room(s) to resize and reshape them.
